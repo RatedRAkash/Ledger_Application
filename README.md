@@ -1,6 +1,3 @@
-![Initial Balance](https://user-images.githubusercontent.com/49761339/112669110-82241a80-8e89-11eb-916f-d7ac561a1f24.PNG)
-![Five_Products_Added](https://user-images.githubusercontent.com/49761339/112669105-805a5700-8e89-11eb-89f5-80f6584b7a42.PNG)
-![Sell_Three_Product](https://user-images.githubusercontent.com/49761339/112669112-82bcb100-8e89-11eb-8a03-6013fe2a86a5.PNG)
 # Ledger_Application
 1. Add a product
   a. A product should have this information
@@ -33,3 +30,6 @@
   of available products in the inventory, and also the profit
   from each product. 
 6. See available balance
+![Initial Balance](https://user-images.githubusercontent.com/49761339/112669110-82241a80-8e89-11eb-916f-d7ac561a1f24.PNG)
+![Five_Products_Added](https://user-images.githubusercontent.com/49761339/112669105-805a5700-8e89-11eb-89f5-80f6584b7a42.PNG)
+![Sell_Three_Product](https://user-images.githubusercontent.com/49761339/112669112-82bcb100-8e89-11eb-8a03-6013fe2a86a5.PNG)
