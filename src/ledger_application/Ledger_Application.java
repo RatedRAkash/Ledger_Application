@@ -15,10 +15,12 @@ public class Ledger_Application {
 
      public static void main(String[] args) {
         
-        MyShop myshop = MyShop.GetInstance(1000); //Only One Instance can be created for MYSHOP
+        MyShop myshop = MyShop.GetInstance(0); //Only One Instance can be created for MYSHOP
         
         while(true)
         {
+            System.out.println("************************************************");
+            
             System.out.println("Press: 0 (EXIT)");
             System.out.println("Press: 1 (Add a product)");
             System.out.println("Press: 2 (Delete a product)");
@@ -28,7 +30,7 @@ public class Ledger_Application {
             System.out.println("Press: 6 (See available balance)"); 
             
             System.out.println("************************************************");
-            System.out.print("Press: ");
+            System.out.print("Enter Key: ");
             Scanner input=new Scanner(System.in);
             int selection = input.nextInt();
 
@@ -105,7 +107,7 @@ public class Ledger_Application {
                 
                 case 6:
                     //AVAILABLE BALANCE
-                    System.out.println(MyShop.getBalance()+ " TK");
+                    System.out.println("Available Balance is : " + MyShop.getBalance()+ " TK");
                     break;
             }
             
@@ -113,6 +115,8 @@ public class Ledger_Application {
             {
                 break;
             }
+            
+            System.out.println("");
             
         }
         
