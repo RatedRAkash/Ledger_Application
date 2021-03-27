@@ -1,4 +1,4 @@
-# Ledger_Application
+# Ledger Application
 1. Add a product
   a. A product should have this information
     i. Product name
