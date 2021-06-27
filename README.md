@@ -1,6 +1,7 @@
 # Ledger Application
-The solution is aimed to store all products' details kept in the inventory and also do certain opeartions like (adding new product, buying, selling, profit counting etc). I used java HashMap to solve the problem and store data. MVC design pattern comprises of Model, View and Controller class. The model class represents the object and also handles certain operations regarding the properties of the class. The view class is tasked to represent the content of the data. Finally, being a bridge between model and view, controller class handles data flow and updates view while data changes.
-This Application can be thought of more like a MVC(Model, View, Controller) pattern. Here the "Product.java" contains all the abstract information of a particular product. "MyShop.java" contains all the logic of how to delete, sell, buy a product from a shop and in "Ledger_Application.java" user interacts with the UI to give command.
+The solution is aimed to store all products' details kept in the inventory and also do certain opeartions like (adding new product, buying, selling, profit counting etc). I used java HashMap to solve the problem and store data. 
+
+This Application can be thought of more like a MVC(Model, View, Controller) pattern. Here the "Product.java" contains all the abstract information of a particular Product. "MyShop.java" contains all the logic of how to delete, sell, buy a product from a shop and in "Ledger_Application.java" user interacts with the UI to give command.
 
 
 1. Add a product
