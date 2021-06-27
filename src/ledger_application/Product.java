@@ -22,13 +22,13 @@ public class Product {
     private int ID;
     private String name;
     
-    Product(String name, int buy_price, int sell_price, int amount_in_inventory, int profit_selling_product)
+    Product(String name, int buy_price, int sell_price, int amount_in_inventory)
     {
         this.name=name;
         this.buy_price=buy_price;
         this.sell_price=sell_price;
         this.amount_in_inventory=amount_in_inventory;
-        this.profit_selling_product=profit_selling_product;
+        //this.profit_selling_product=profit_selling_product;
         this.delete_flag=0;
     }
 

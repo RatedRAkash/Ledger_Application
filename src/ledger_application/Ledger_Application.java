@@ -12,10 +12,27 @@ import java.util.Scanner;;
  * @author RatedRAkash
  */
 public class Ledger_Application {
+    
+    private static void init(){
+        MyShop.Add_a_Product("TV", 22000, 25000, 10);
+        MyShop.Add_a_Product("Mobile", 12000, 14000, 20);
+        MyShop.Add_a_Product("AC", 30000, 45000, 15);
+        MyShop.Add_a_Product("Headphone", 800, 850, 50);
+        MyShop.Add_a_Product("VR set", 1000, 1200, 5);
+        System.out.println("Initially 10 TV, 20 Mobile, 15 AC, 50 Headphones and 5 VR set are added.");
+
+        MyShop.Sell_a_Product(1, 10);
+        MyShop.Sell_a_Product(2, 5);
+        MyShop.Sell_a_Product(4, 15);
+        
+    }
+
 
      public static void main(String[] args) {
         
         MyShop myshop = MyShop.GetInstance(0); //Only One Instance can be created for MYSHOP
+        
+        init(); //Initial Add Products
         
         while(true)
         {
@@ -44,7 +61,7 @@ public class Ledger_Application {
                     
                 case 1:
                     //ADD PRODUCT
-                    Scanner sc= new Scanner(System.in); 
+                    Scanner sc = new Scanner(System.in); 
         
                     System.out.print("Enter Name of the Product : "); 
                     String name=sc.next();
@@ -58,9 +75,7 @@ public class Ledger_Application {
                     System.out.print("Enter Amount available in inventory : ");  
                     int amount= sc.nextInt();
         
-                    Product ob = new Product(name, buy_price, sell_price, amount, 0);
-
-                    MyShop.Add_a_Product(ob);
+                    MyShop.Add_a_Product(name, buy_price, sell_price, amount);
         
                     break;
 
@@ -81,7 +96,7 @@ public class Ledger_Application {
                     System.out.print("Enter the Product Number You want to BUY : ");  
                     ID = sc.nextInt();
                     
-                    System.out.print("Enter the amount You want to Sell : ");  
+                    System.out.print("Enter the amount You want to Buy : ");  
                     amount = sc.nextInt();
                     
                     MyShop.Buy_a_Product(ID, amount);

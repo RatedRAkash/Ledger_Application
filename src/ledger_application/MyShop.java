@@ -35,14 +35,16 @@ public class MyShop {
     {
         this.Balance=Balance;
         coun=0;
-        Product_Map = new HashMap<Integer,Product>();
+        Product_Map=new HashMap<Integer,Product>();
     }
         
     
     //FUNCTIONS
-    static void Add_a_Product(Product ob)
+    static void Add_a_Product(String name, int buy_price, int sell_price, int amount)
     {
-        setCoun(getCoun() + 1);
+        Product ob = new Product(name, buy_price, sell_price, amount);//At first Zero Profit from Selling
+
+        setCoun(getCoun() + 1); //Incementing ProductID
         Product_Map.put(getCoun(),ob);
     }
         
@@ -56,7 +58,6 @@ public class MyShop {
         {
             System.out.println("There is NO PRODUCT with this ID OR the Product has been deleted already");          
         }
-        
     }
     
     static int Buy_a_Product(Integer ID, int amount)
@@ -64,10 +65,11 @@ public class MyShop {
         try
         {
             int buying_price=(Product_Map.get(ID).getBuy_price())*amount;
-        
+            
             if(getBalance()>=buying_price)
             {
                 setBalance(getBalance() - buying_price);
+                Product_Map.get(ID).setAmount_in_inventory(Product_Map.get(ID).getAmount_in_inventory() + amount);
             }
         
             else
@@ -121,7 +123,7 @@ public class MyShop {
         int total=0;
         // Print the list objects in tabular format
 	System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
-	System.out.printf("%5s %20s %25s %20s %25s %25s", "SERIAL NO.", "PRODUCT NAME", "BUYING PRICE", "SELLING PRICE", "AMOUNT AVAILABLE", "PROFIT FROM PRODUCT");
+	System.out.printf("%5s %20s %25s %20s %25s %25s", "PRODUCT NO.", "PRODUCT NAME", "BUYING PRICE", "SELLING PRICE", "AMOUNT AVAILABLE", "PROFIT FROM PRODUCT");
 	System.out.println();
 	System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
 	for (Map.Entry<Integer,Product> entry : Product_Map.entrySet())
@@ -150,11 +152,10 @@ public class MyShop {
         System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
 	
         System.out.println();
-	
-        
-        
+	     
     }
 
+    
     public static int getBalance() {
         return Balance;
     }
