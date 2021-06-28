@@ -1,11 +1,13 @@
 # Ledger Application
 The solution is aimed to store all products' details kept in the inventory and also do certain opeartions like (adding new product, buying, selling, profit counting etc). I used java HashMap to solve the problem and store data. 
 
-This Application can be thought of more like a MVC(Model, View, Controller) pattern. Here the "Product.java" contains all the abstract information of a particular Product. "MyShop.java" contains all the logic of how to delete, sell, buy a product from a shop and in "Ledger_Application.java" user interacts with the UI to give command.
+(a) This Application can be thought of more like a MVC(Model, View, Controller) pattern. Here the "Product.java" contains all the abstract information of a particular Product. "MyShop.java" contains all the logic of how to delete, sell, buy a product from a shop and in "Ledger_Application.java" user interacts with the UI to give command.
 
-Also, Here I used "Encapsulation" property of OOP to with access modifiers(e.g., Private) to encapsulate the information of Product class and used getters and setters to access them later.
+(b) Also, Here I used "Encapsulation" property of OOP to with access modifiers(e.g., Private) to encapsulate the information of Product class and used getters and setters to access them later.
 
-I also used Singleton pattern as there can be only one MyShop instance can be created.
+(c) I also used Singleton pattern as there can be only one MyShop instance can be created.
+
+
 
 1. Add a product
   a. A product should have this information
